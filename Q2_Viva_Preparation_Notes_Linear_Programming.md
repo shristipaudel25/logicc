@@ -1,4 +1,4 @@
-# Viva Preparation Notes — Q2 Linear Programming Problem (MA4001NP Logic and Problem Solving)
+# Viva Preparation Notes - Q2 Linear Programming Problem (MA4001NP Logic and Problem Solving)
 
 These notes are for **reading, revision, and viva preparation**. They explain concepts step-by-step in simple, correct language.
 
@@ -251,15 +251,15 @@ Optimal days:
 - (0,0)
 - (0,210)
 - (315,0)
-- (270,75) — intersection of `5x+3y=1575` and `x+2y=420`
+- (270,75) - intersection of `5x+3y=1575` and `x+2y=420`
 
 **Intersection calculation**
-- From `x + 2y = 420` ⇒ `x = 420 − 2y`
+- From `x + 2y = 420` ⇒ `x = 420 - 2y`
 - Substitute into `5x + 3y = 1575`:
-  - `5(420 − 2y) + 3y = 1575`
-  - `2100 − 10y + 3y = 1575`
-  - `−7y = −525` ⇒ `y = 75`
-  - `x = 420 − 2(75) = 270`
+  - `5(420 - 2y) + 3y = 1575`
+  - `2100 - 10y + 3y = 1575`
+  - `-7y = -525` ⇒ `y = 75`
+  - `x = 420 - 2(75) = 270`
 
 **Evaluate objective function**
 - `Z(0,0) = 0`
@@ -325,11 +325,11 @@ Optimal days:
    - Follow-up: Does this hold for nonlinear problems?
 10. **What is slack?**  
     - Short: Unused capacity in “≤” constraints.  
-    - Technical: `s = b − Ax` with `s ≥ 0`.  
+    - Technical: `s = b - Ax` with `s ≥ 0`.  
     - Follow-up: When is slack zero?
 11. **What is surplus?**  
     - Short: Excess over a “≥” constraint.  
-    - Technical: `Ax − s = b` with surplus `s ≥ 0`.  
+    - Technical: `Ax - s = b` with surplus `s ≥ 0`.  
     - Follow-up: Why do we subtract surplus?
 12. **Why add artificial variables?**  
     - Short: To start simplex with a feasible basis.  
