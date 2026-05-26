@@ -268,7 +268,7 @@ Optimal days:
 - `Z(270,75) = 13(270) + 11(75) = 3510 + 825 = 4335`
 
 **Conclusion**
-- Maximum profit **Z = 4335** at **B(270,75)**.
+- Maximum profit **Z = 4335** at **(270,75)**.
 
 ---
 
