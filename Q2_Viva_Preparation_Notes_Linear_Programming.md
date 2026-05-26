@@ -1,6 +1,6 @@
 # Viva Preparation Notes — Q2 Linear Programming Problem (MA4001NP Logic and Problem Solving)
 
-These notes are for **reading, revision, and viva preparation**. They explain concepts step‑by‑step in simple, correct language.
+These notes are for **reading, revision, and viva preparation**. They explain concepts step-by-step in simple, correct language.
 
 ---
 
@@ -13,10 +13,10 @@ These notes are for **reading, revision, and viva preparation**. They explain co
 - **Minimization vs Maximization**
   - **Minimization:** reduce cost/time/effort while meeting requirements.
   - **Maximization:** increase profit/output/utility within limits.
-- **Real‑world applications**
+- **Real-world applications**
   - Production planning, transportation, diet planning, staffing, scheduling, mixing/blending.
 - **Why businesses use LPP**
-  - It provides **best‑possible decisions** backed by numbers, not guesswork.
+  - It provides **best-possible decisions** backed by numbers, not guesswork.
 
 **Quick memory tip:**  
 “**M**inimize **M**oney spent; **M**aximize **M**oney made.”
@@ -35,13 +35,13 @@ These notes are for **reading, revision, and viva preparation**. They explain co
 - **Slack Variables:** extra amount when a “≤” constraint is not tight.
   - Example: if capacity is 100 and you use 90, slack = 10.
 - **Artificial Variables:** temporary variables used in simplex for “≥” or “=” constraints.
-- **Non‑negativity Constraints:** variables cannot be negative (x ≥ 0).
+- **Non-negativity Constraints:** variables cannot be negative (x ≥ 0).
 - **Maximization:** make objective as large as possible.
 - **Minimization:** make objective as small as possible.
 
 ---
 
-## 3. Part A – Minimization Problem (Step‑by‑Step)
+## 3. Part A – Minimization Problem (Step-by-Step)
 **Problem context:** Three plants produce three models of bulbs. Each plant has daily capacity and daily cost. Find how many days to run each plant to **meet demand at minimum cost**.
 
 ### 3.1 Decision Variables
@@ -90,21 +90,21 @@ Daily production capacities (units/day):
 - Constraint: `8000x1 + 3000x2 + 8000x3 ≥ 249,500`
   - Meaning: combined Model 3 output must be at least 249,500 units.
 
-**Non‑negativity**
+**Non-negativity**
 - `x1, x2, x3 ≥ 0` (days cannot be negative)
 
 ---
 
 ## 4. Understanding Constraints
 - **Why constraints are necessary**
-  - They represent **real‑world limits** (demand, capacity, policy).
+  - They represent **real-world limits** (demand, capacity, policy).
 - **Meaning of “≥”**
   - The company must **meet or exceed demand** for each model.
 - **Why production demand must be satisfied**
-  - Under‑producing fails customer orders and hurts business reputation.
+  - Under-producing fails customer orders and hurts business reputation.
 - **What happens if constraints are violated**
   - Solution becomes **infeasible** (not allowed in real life).
-- **Why non‑negativity constraints are important**
+- **Why non-negativity constraints are important**
   - Negative days or negative production **have no real meaning**.
 
 ---
@@ -129,10 +129,10 @@ Daily production capacities (units/day):
 
 ---
 
-## 6. Excel Solver Implementation (Step‑by‑Step)
+## 6. Excel Solver Implementation (Step-by-Step)
 - **Create the Excel template**
   - Make cells for `x1, x2, x3`.
-  - Add formulas for each constraint’s left‑hand side.
+  - Add formulas for each constraint’s left-hand side.
   - Add a cell for total cost `Z`.
 - **Enter decision variables**
   - Put starting guesses (e.g., 0) in `x1, x2, x3`.
@@ -142,7 +142,7 @@ Daily production capacities (units/day):
   - Model 1: `8000x1 + 6000x2 + 12000x3 ≥ 300,000`.
   - Model 2: `4000x1 + 6000x2 + 4000x3 ≥ 172,000`.
   - Model 3: `8000x1 + 3000x2 + 8000x3 ≥ 249,500`.
-  - Non‑negativity: `x1, x2, x3 ≥ 0`.
+  - Non-negativity: `x1, x2, x3 ≥ 0`.
 - **Choose “Changing Variable Cells”**
   - Select the cells containing `x1, x2, x3`.
 - **Add constraints in Solver**
@@ -157,7 +157,7 @@ Daily production capacities (units/day):
 
 **Common Solver setup mistakes**
 - Wrong sign (≥ vs ≤)
-- Forgetting non‑negativity
+- Forgetting non-negativity
 - Selecting wrong objective (Max instead of Min)
 
 ---
@@ -173,7 +173,7 @@ Daily production capacities (units/day):
   - Shows how much each variable can change while still meeting constraints.
 
 **Business interpretation**
-- Sensitivity helps managers test “what‑if” situations without solving again.
+- Sensitivity helps managers test “what-if” situations without solving again.
 
 ---
 
@@ -219,7 +219,7 @@ Optimal days:
 - `x + 2y ≤ 420`
 - `x, y ≥ 0`
 
-**Why convert inequalities into equations**
+**Why convert inequalities into equations?**
 - To draw each line and find intercepts.
   - Example: `4x + 5y = 1500` is the boundary line.
 
@@ -246,7 +246,7 @@ Optimal days:
 
 ---
 
-## 11. Graphical Solution (Step‑by‑Step)
+## 11. Graphical Solution (Step-by-Step)
 **Vertices (corner points)**
 - (0,0)
 - (0,210)
@@ -272,7 +272,7 @@ Optimal days:
 
 ---
 
-## 12. Practical Understanding (Real‑World Meaning)
+## 12. Practical Understanding (Real-World Meaning)
 - **Minimization**
   - Used to **reduce cost**, e.g., cheapest production plan that still meets demand.
 - **Maximization**
@@ -290,211 +290,211 @@ Optimal days:
 1. **What is an LPP?**  
    - Short: A model to optimize a linear objective with linear constraints.  
    - Technical: Optimize `Z = cᵀx` subject to `Ax ≤/≥ b`, `x ≥ 0`.  
-   - Follow‑up: Why must it be linear?
+   - Follow-up: Why must it be linear?
 2. **Why do we use decision variables?**  
    - Short: They represent choices we control.  
    - Technical: They form the vector `x` in the model.  
-   - Follow‑up: What happens if you choose wrong variables?
+   - Follow-up: What happens if you choose wrong variables?
 3. **What is the objective function here?**  
    - Short: Minimize operating cost.  
    - Technical: `Min Z = 55,000x1 + 60,000x2 + 60,000x3`.  
-   - Follow‑up: What if costs change?
+   - Follow-up: What if costs change?
 4. **Why is it a minimization problem?**  
    - Short: We want the lowest cost.  
    - Technical: Costs are positive and constraints ensure demand.  
-   - Follow‑up: Could it ever be maximization?
+   - Follow-up: Could it ever be maximization?
 5. **What is a constraint?**  
    - Short: A condition that must hold.  
    - Technical: A linear inequality/equality in `x`.  
-   - Follow‑up: What if a constraint is removed?
-6. **Explain non‑negativity.**  
+   - Follow-up: What if a constraint is removed?
+6. **Explain non-negativity.**  
    - Short: Negative production is impossible.  
-   - Technical: `x ≥ 0` ensures real‑world feasibility.  
-   - Follow‑up: What if negative values were allowed?
+   - Technical: `x ≥ 0` ensures real-world feasibility.  
+   - Follow-up: What if negative values were allowed?
 7. **What is a feasible region?**  
    - Short: Set of all valid solutions.  
-   - Technical: Intersection of all constraint half‑planes.  
-   - Follow‑up: Can it be empty?
+   - Technical: Intersection of all constraint half-planes.  
+   - Follow-up: Can it be empty?
 8. **What is a basic feasible solution?**  
    - Short: A corner point solution.  
    - Technical: A feasible solution with `m` basic variables.  
-   - Follow‑up: Why are BFS important?
+   - Follow-up: Why are BFS important?
 9. **Why does optimum occur at a vertex?**  
    - Short: Linear objective over a polygon peaks at corners.  
    - Technical: Follows from convexity and linearity.  
-   - Follow‑up: Does this hold for nonlinear problems?
+   - Follow-up: Does this hold for nonlinear problems?
 10. **What is slack?**  
     - Short: Unused capacity in “≤” constraints.  
     - Technical: `s = b − Ax` with `s ≥ 0`.  
-    - Follow‑up: When is slack zero?
+    - Follow-up: When is slack zero?
 11. **What is surplus?**  
     - Short: Excess over a “≥” constraint.  
     - Technical: `Ax − s = b` with surplus `s ≥ 0`.  
-    - Follow‑up: Why do we subtract surplus?
+    - Follow-up: Why do we subtract surplus?
 12. **Why add artificial variables?**  
     - Short: To start simplex with a feasible basis.  
-    - Technical: Used in Big‑M or two‑phase methods.  
-    - Follow‑up: How do we remove them?
+    - Technical: Used in Big-M or two-phase methods.  
+    - Follow-up: How do we remove them?
 13. **What is the simplex method?**  
     - Short: An algorithm to reach the best corner point.  
     - Technical: Iterative pivoting on a tableau.  
-    - Follow‑up: Why not use graphing for 3 variables?
+    - Follow-up: Why not use graphing for 3 variables?
 14. **What is a pivot element?**  
     - Short: The element used to update the tableau.  
     - Technical: Intersection of key row and key column.  
-    - Follow‑up: What makes a correct pivot?
+    - Follow-up: What makes a correct pivot?
 15. **Explain key column selection.**  
     - Short: Column with greatest improvement potential.  
     - Technical: Most negative reduced cost for minimization.  
-    - Follow‑up: What if there is a tie?
+    - Follow-up: What if there is a tie?
 16. **Explain key row selection.**  
     - Short: The smallest ratio test row.  
     - Technical: `b_i / a_ij` minimum positive value.  
-    - Follow‑up: What if no positive ratio exists?
+    - Follow-up: What if no positive ratio exists?
 17. **What is degeneracy?**  
     - Short: When a BFS has a zero basic variable.  
     - Technical: Can cause cycling in simplex.  
-    - Follow‑up: How is cycling avoided?
+    - Follow-up: How is cycling avoided?
 18. **How do you check feasibility?**  
     - Short: Substitute values into all constraints.  
     - Technical: Verify `Ax ≤/≥ b` and `x ≥ 0`.  
-    - Follow‑up: What if one fails?
+    - Follow-up: What if one fails?
 19. **Explain sensitivity analysis.**  
     - Short: Check how changes affect the optimal solution.  
     - Technical: Uses shadow prices and allowable ranges.  
-    - Follow‑up: Why is it useful for managers?
+    - Follow-up: Why is it useful for managers?
 20. **What is a shadow price?**  
     - Short: Value of one extra unit of a resource.  
     - Technical: Dual variable value for a constraint.  
-    - Follow‑up: Can it be negative?
+    - Follow-up: Can it be negative?
 21. **Why use Excel Solver?**  
     - Short: Fast and accurate for linear models.  
     - Technical: Uses Simplex LP automatically.  
-    - Follow‑up: What happens if you choose GRG?
+    - Follow-up: What happens if you choose GRG?
 22. **What does “binding constraint” mean?**  
     - Short: Constraint exactly met at optimum.  
     - Technical: Slack/surplus = 0.  
-    - Follow‑up: Why are binding constraints important?
+    - Follow-up: Why are binding constraints important?
 23. **How do you find intercepts?**  
     - Short: Set x=0 then y=0.  
     - Technical: Solve boundary equations for axis points.  
-    - Follow‑up: Why are intercepts useful?
+    - Follow-up: Why are intercepts useful?
 24. **What is the corner point method?**  
     - Short: Evaluate Z at each vertex.  
     - Technical: Check all extreme points of feasible region.  
-    - Follow‑up: How many vertices can exist?
+    - Follow-up: How many vertices can exist?
 25. **Why does Plant 1 run the most days?**  
     - Short: It has the lowest daily cost.  
     - Technical: Cost coefficient is minimum in objective.  
-    - Follow‑up: What if its capacity were lower?
+    - Follow-up: What if its capacity were lower?
 26. **Why do we have ≥ in demand constraints?**  
     - Short: Demand must be met or exceeded.  
     - Technical: Production totals must be at least required.  
-    - Follow‑up: When would we use equality?
+    - Follow-up: When would we use equality?
 27. **Explain the meaning of x1, x2, x3.**  
     - Short: Plant operating days.  
     - Technical: Continuous decision variables in days.  
-    - Follow‑up: Are they integers?
+    - Follow-up: Are they integers?
 28. **What is the feasible region shape?**  
     - Short: A polygon in 2D.  
     - Technical: A convex polyhedron in higher dimensions.  
-    - Follow‑up: Why convex?
+    - Follow-up: Why convex?
 29. **How is the optimum verified in Part B?**  
     - Short: Compare Z at all vertices.  
     - Technical: Max Z among feasible corners.  
-    - Follow‑up: Could an edge also be optimal?
+    - Follow-up: Could an edge also be optimal?
 30. **Why is (270,75) optimal?**  
     - Short: It gives highest Z = 4335.  
     - Technical: It satisfies all constraints with max objective.  
-    - Follow‑up: Which constraints are binding there?
+    - Follow-up: Which constraints are binding there?
 31. **What is a dual problem?**  
     - Short: A related LPP that flips roles of constraints.  
-    - Technical: Dual of min is max and vice‑versa.  
-    - Follow‑up: Why is duality important?
+    - Technical: Dual of min is max and vice-versa.  
+    - Follow-up: Why is duality important?
 32. **What is unboundedness?**  
     - Short: Objective can increase without limit.  
     - Technical: Feasible region open in improving direction.  
-    - Follow‑up: How do you detect it?
+    - Follow-up: How do you detect it?
 33. **What is infeasibility?**  
     - Short: No solution satisfies all constraints.  
     - Technical: Constraint system has no intersection.  
-    - Follow‑up: How do you fix infeasibility?
+    - Follow-up: How do you fix infeasibility?
 34. **Explain the role of artificial variables in Part A.**  
     - Short: Help start simplex for ≥ constraints.  
-    - Technical: Added then penalized in Big‑M.  
-    - Follow‑up: What if they remain in final solution?
+    - Technical: Added then penalized in Big-M.  
+    - Follow-up: What if they remain in final solution?
 35. **What is the meaning of Z?**  
     - Short: Total cost or total profit.  
     - Technical: Objective function value.  
-    - Follow‑up: Is Z always monetary?
+    - Follow-up: Is Z always monetary?
 36. **Why are constraints linear?**  
     - Short: LPP requires linear relationships.  
     - Technical: Coefficients constant; variables not multiplied.  
-    - Follow‑up: What if cost per day changes with time?
+    - Follow-up: What if cost per day changes with time?
 37. **Can LPP handle integer decisions?**  
     - Short: Not directly; needs integer programming.  
     - Technical: Add integrality constraints.  
-    - Follow‑up: Why is that harder?
-38. **What is the Big‑M method?**  
+    - Follow-up: Why is that harder?
+38. **What is the Big-M method?**  
     - Short: Penalty method for artificial variables.  
     - Technical: Add ±M in objective to force removal.  
-    - Follow‑up: What is two‑phase method?
+    - Follow-up: What is two-phase method?
 39. **Why do we check all vertices in graphing?**  
     - Short: Max/min occurs at a vertex.  
     - Technical: Linear objective on a convex polytope.  
-    - Follow‑up: What about ties?
+    - Follow-up: What about ties?
 40. **What is a tie in simplex?**  
     - Short: Two candidates for entering/leaving.  
     - Technical: Multiple optimal or degenerate solutions.  
-    - Follow‑up: How do you choose?
+    - Follow-up: How do you choose?
 41. **What if demand increases?**  
-    - Short: Re‑solve with new RHS values.  
+    - Short: Re-solve with new RHS values.  
     - Technical: Use sensitivity ranges if within limits.  
-    - Follow‑up: What if outside limits?
+    - Follow-up: What if outside limits?
 42. **What does “binding” mean in Part B?**  
     - Short: Constraint exactly equals the limit.  
     - Technical: For (270,75), constraints 2 and 3 are binding.  
-    - Follow‑up: Which one is non‑binding?
+    - Follow-up: Which one is non-binding?
 43. **How do you explain results to managers?**  
     - Short: Convert numbers to actions.  
     - Technical: State days, costs, and benefits clearly.  
-    - Follow‑up: Why is it important?
-44. **Why is simplex better than trial‑and‑error?**  
+    - Follow-up: Why is it important?
+44. **Why is simplex better than trial-and-error?**  
     - Short: Systematic and guaranteed.  
     - Technical: Moves along BFS with objective improvement.  
-    - Follow‑up: What is its worst‑case complexity?
+    - Follow-up: What is its worst-case complexity?
 45. **What is the role of the feasible region?**  
     - Short: It limits possible solutions.  
     - Technical: Defines all valid x vectors.  
-    - Follow‑up: What if region is unbounded?
+    - Follow-up: What if region is unbounded?
 46. **What is the interpretation of (0,210)?**  
     - Short: Produce using only y.  
     - Technical: x = 0, y = 210 satisfies constraints.  
-    - Follow‑up: Is it optimal?
-47. **Why is non‑negativity assumed?**  
+    - Follow-up: Is it optimal?
+47. **Why is non-negativity assumed?**  
     - Short: Negative production has no meaning.  
     - Technical: Keeps solution in realistic domain.  
-    - Follow‑up: What if returns are allowed?
+    - Follow-up: What if returns are allowed?
 48. **What is a continuous variable?**  
     - Short: Can take fractional values.  
-    - Technical: Real‑valued decision variable.  
-    - Follow‑up: Is 22.5 days acceptable?
+    - Technical: Real-valued decision variable.  
+    - Follow-up: Is 22.5 days acceptable?
 49. **How do you verify the cost calculation?**  
     - Short: Multiply cost per day by days and sum.  
     - Technical: Evaluate objective at optimal x.  
-    - Follow‑up: What if rounding is required?
+    - Follow-up: What if rounding is required?
 50. **What is the main conclusion for Q2?**  
-    - Short: A cost‑minimizing schedule and a profit‑maximizing point.  
+    - Short: A cost-minimizing schedule and a profit-maximizing point.  
     - Technical: `x1=22.5, x2=10.5, x3=4.75` and `(270,75)`.  
-    - Follow‑up: How would changes affect these?
+    - Follow-up: How would changes affect these?
 
 ---
 
 ## 14. Common Mistakes and Viva Traps
 - Wrong feasible region due to shading the wrong side.
 - Incorrect intercepts (division errors).
-- Using **≤** instead of **≥** (or vice‑versa).
-- Forgetting non‑negativity constraints.
+- Using **≤** instead of **≥** (or vice-versa).
+- Forgetting non-negativity constraints.
 - Misinterpreting decision variables.
 - Mixing models (Model 1/2/3) in constraints.
 - Objective function sign mistakes.
@@ -508,7 +508,7 @@ Optimal days:
 - **Limitations**
   - Assumes linearity and constant rates.
   - Assumes divisibility (fractional days allowed).
-  - Ignores uncertainty and real‑world variability.
+  - Ignores uncertainty and real-world variability.
 - **Why real problems are more complex**
   - Costs may change, demand may fluctuate, resources may be discrete.
 - **Possible improvements**
@@ -541,7 +541,7 @@ Optimal days:
 - Maximize profit graphically (Part B)
 - Optimum at vertices
 
-### Last‑minute tips
+### Last-minute tips
 - Draw a quick constraint graph and check shading.
 - Always compute Z at every vertex.
-- Double‑check signs and units.
+- Double-check signs and units.
