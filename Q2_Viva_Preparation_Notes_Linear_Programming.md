@@ -254,11 +254,11 @@ Optimal days:
 - (270,75) - intersection of `5x+3y=1575` and `x+2y=420`
 
 **Intersection calculation**
-- From `x + 2y = 420` ⇒ `x = 420 - 2y`
+- From `x + 2y = 420` => `x = 420 - 2y`
 - Substitute into `5x + 3y = 1575`:
   - `5(420 - 2y) + 3y = 1575`
   - `2100 - 10y + 3y = 1575`
-  - `-7y = -525` ⇒ `y = 75`
+  - `-7y = -525` => `y = 75`
   - `x = 420 - 2(75) = 270`
 
 **Evaluate objective function**
@@ -289,7 +289,7 @@ Optimal days:
 ## 13. Common Viva Questions with Answers (50)
 1. **What is an LPP?**  
    - Short: A model to optimize a linear objective with linear constraints.  
-   - Technical: Optimize `Z = cᵀx` subject to `Ax ≤/≥ b`, `x ≥ 0`.  
+   - Technical: Optimize `Z = c^Tx` subject to `Ax ≤/≥ b`, `x ≥ 0`.  
    - Follow-up: Why must it be linear?
 2. **Why do we use decision variables?**  
    - Short: They represent choices we control.  
